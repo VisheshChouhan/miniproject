@@ -150,12 +150,53 @@ def changepalm():
         invalidselection = messagebox.showinfo("Invalid option", 
                                                 "Your selection is not in bill ")
 
+
+# changes the prices of plants
 def rose_price_change():
-    rose_simple_dialog_box = simpledialog.askinteger("Rose", "Price")
-    price_dictionary["rose"] = rose_simple_dialog_box
-else:
-        invalidselection = messagebox.showinfo("Invalid option", 
-                                                "Your selection is not in bill ")
+    simple_dialog_box = simpledialog.askinteger("Rose", "Price")
+    price_dictionary["rose"] = simple_dialog_box
+
+# changes the prices of plants
+def sunflower_price_change():
+    simple_dialog_box = simpledialog.askinteger("Sunflower", "Price")
+    price_dictionary["sunflower"] = simple_dialog_box
+
+# changes the prices of plants
+def jasmine_price_change():
+    simple_dialog_box = simpledialog.askinteger("Jasmine", "Price")
+    price_dictionary["jasmine"] = simple_dialog_box
+
+# changes the prices of plants
+def aloevera_price_change():
+    simple_dialog_box = simpledialog.askinteger("Aloevera", "Price")
+    price_dictionary["aloevera"] = simple_dialog_box
+
+# changes the prices of plants
+def moneyplant_price_change():
+    simple_dialog_box = simpledialog.askinteger("Moneyplant", "Price")
+    price_dictionary["moneyplant"] = simple_dialog_box
+
+# changes the prices of plants
+def jade_price_change():
+    simple_dialog_box = simpledialog.askinteger("Jade", "Price")
+    price_dictionary["jade"] = simple_dialog_box
+
+# changes the prices of plants
+def adenium_price_change():
+    simple_dialog_box = simpledialog.askinteger("Adenium", "Price")
+    price_dictionary["adenium"] = simple_dialog_box
+
+# changes the prices of plants
+def cactus_price_change():
+    simple_dialog_box = simpledialog.askinteger("Cactus", "Price")
+    price_dictionary["cactus"] = simple_dialog_box
+
+
+# changes the prices of plants
+def palm_price_change():
+    simple_dialog_box = simpledialog.askinteger("palm", "Price")
+    price_dictionary["palm"] = simple_dialog_box
+
 
 
 
@@ -193,13 +234,15 @@ def gotoflower():
 
 
     # for deletion 
-    delrose = tkinter.Button(flower_window, text = "Change quantity",   image = cancelimage,  
+    delrose = tkinter.Button(flower_window, text = "Change quantity",  
+                             image = cancelimage,  
                         height = 100,width = 300, font = ("algerian", 15), 
                         compound = "left", bg = "white",
                         command = changerose).grid(row = 1, column = 2)
 
     # for changing price 
-    change_rose_price = tkinter.Button(flower_window, text = "Change price",   image = cancelimage,  
+    change_rose_price = tkinter.Button(flower_window, text = "Change price",  
+                         image = cancelimage,  
                         height = 100,width = 300, font = ("algerian", 15), 
                         compound = "left", bg = "white",
                         command = rose_price_change).grid(row = 1, column = 3)
@@ -223,6 +266,13 @@ def gotoflower():
                         height = 100,width = 300, font = ("algerian", 15), 
                         compound = "left", bg = "white",
                         command = changesunflower).grid(row = 2, column = 2)
+
+    # for changing price 
+    change_sunflower_price = tkinter.Button(flower_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = sunflower_price_change).grid(row = 2, column = 3)
     
     
     ## Buttons denoting the plant name to be selected
@@ -242,6 +292,13 @@ def gotoflower():
                         compound = "left", bg = "white",
                         command = changejasmine).grid(row = 3, column = 2)
 
+    # for changing price 
+    change_jasmine_price = tkinter.Button(flower_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = jasmine_price_change).grid(row = 3, column = 3)
+
 # The given function will be assigned to the command of decoration button
 # Hence it will be called when button is clicked
 def gotodecoration():
@@ -250,7 +307,7 @@ def gotodecoration():
     decoration_window = tkinter.Toplevel()
     decoration_window.title("Dedoration Plants")
     decoration_window.config(bg = "white")
-    decoration_window.geometry("850x500+150+150")
+    decoration_window.geometry("1150x500+150+150")
 
     decorationlabel = tkinter.Label(decoration_window, 
                                   text = "Decoration Plants", 
@@ -277,6 +334,13 @@ def gotodecoration():
                         compound = "left", bg = "white",
                         command = changealoevera).grid(row = 1, column = 2)
 
+    # for changing price 
+    change_aloevera_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = aloevera_price_change).grid(row = 1, column = 3)                                               
+
     
     
     ## Buttons denoting the plant name to be selected
@@ -297,6 +361,14 @@ def gotodecoration():
                         height = 100,width = 300, font = ("algerian", 15), 
                         compound = "left", bg = "white",
                         command = changemoneyplant).grid(row = 2, column = 2)
+
+    # for changing price 
+    change_moneyplant_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = moneyplant_price_change).grid(row = 2, column = 3)
+
     
     ## Buttons denoting the plant name to be selected
     jade = tkinter.Button(decoration_window, text = "Jade", image = fphoto, 
@@ -314,6 +386,13 @@ def gotodecoration():
                         compound = "left", bg = "white",
                         command = changejade).grid(row = 3, column = 2)
 
+    # for changing price 
+    change_jade_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = jade_price_change).grid(row = 3, column = 3)                       
+
 
 # The given function will be assigned to the command of desert button
 # Hence it will be called when button is clicked  
@@ -323,7 +402,7 @@ def gotodesert():
     decoration_window = tkinter.Toplevel()
     decoration_window.title("Desert plants")
     decoration_window.config(bg = "white")
-    decoration_window.geometry("850x500+150+150")
+    decoration_window.geometry("1150x500+150+150")
 
     desertlabel = tkinter.Label(decoration_window, text = "Desert Plants", 
                               font = ("algerian", 25), image = fphoto, 
@@ -349,6 +428,13 @@ def gotodesert():
                         height = 100,width = 300, font = ("algerian", 15), 
                         compound = "left", bg = "white",
                         command = changeadenium).grid(row = 1, column = 2)
+
+    # for changing price 
+    change_adenium_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = adenium_price_change).grid(row = 1, column = 3)   
     
     ## Buttons denoting the plant name to be selected
     cactus = tkinter.Button(decoration_window, text = "Cactus", image = fphoto, 
@@ -366,6 +452,13 @@ def gotodesert():
                         height = 100,width = 300, font = ("algerian", 15), 
                         compound = "left", bg = "white",
                         command = changecactus).grid(row = 2, column = 2)
+
+    # for changing price 
+    change_cactus_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = cactus_price_change).grid(row = 2, column = 3)   
     
     
     ## Buttons denoting the plant name to be selected
@@ -383,6 +476,13 @@ def gotodesert():
                         height = 100,width = 300, font = ("algerian", 15), 
                         compound = "left", bg = "white",
                         command = changepalm).grid(row = 3, column = 2)
+
+    # for changing price 
+    change_palm_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = palm_price_change).grid(row = 3, column = 3)   
     
 
 ## The billf function will generate the bill 
