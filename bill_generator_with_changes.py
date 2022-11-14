@@ -625,7 +625,19 @@ def billf():
                                      borderwidth = 3, relief = "raised", 
                                      command = sortbill).place(x = 450, y = 600)
 
+# function that sort the list
+def sort_list(l):
+    for r in range(len(l)):
+        for c in range(len(l)-r-1):
+            if l[c] > l[c+1]:
+                l[c], l[c+1] = l[c+1], l[c]
+   
 
+
+
+
+# produces result in sorted order
+# alphanumerically with respect to the plant name 
 def sortbill():
     ## bill window
     bill_window = tkinter.Toplevel()
@@ -689,10 +701,10 @@ def sortbill():
     total_quantity = 0
 
     # list that contains plant name in sorted order
-    sorted_list = ["adenium","cactus","rose","sunflower","jasmine","jade","palm","moneyplant","aloevera"]
-    sorted_list.sort()
+    listOfPlants = ["adenium","cactus","rose","sunflower","jasmine","jade","palm","moneyplant","aloevera"]
+    sort_list(listOfPlants)
 
-    for i in sorted_list:
+    for i in listOfPlants:
         if i in quantity_dictionary:
             snor = tkinter.Label(bill_window, text = "{0:^5d}".format(row_number), 
                                font = ("indian rupee", 15), bg = "white", 
@@ -748,11 +760,11 @@ def sortbill():
                             width = 8).grid(row = row_number+6, column = 4)
     
     def pay():
-        simpledialog_box_ask_yes_no = messagebox.askyesno("", "Do you really \
-                                            want to recieve transaction.")
+        simpledialog_box_ask_yes_no = messagebox.askyesno("", 
+                                    "Do you really want to recieve transaction.")
         if simpledialog_box_ask_yes_no:
-            messageboxpaydone = messagebox.showinfo("Thankyou", "Payment \
-                                                    Successfull")
+            messageboxpaydone = messagebox.showinfo("Thankyou", 
+                                                "Payment Successfull")
 
     pay_button = tkinter.Button(bill_window, text = "Recieve", 
                                 font = ("algerian", 15), bg = "white", 
