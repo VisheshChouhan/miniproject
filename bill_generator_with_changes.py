@@ -11,6 +11,12 @@ import cProfile
 import pstats
 from pstats import SortKey
 
+# importing for generationg invoice
+import os
+from InvoiceGenerator.api import Invoice, Item, Client, Provider, Creator
+from InvoiceGenerator.pdf import SimpleInvoice
+
+
 ## dictionary to keep the quantity of each plant sold 
 quantity_dictionary = dict()
 
@@ -487,12 +493,6 @@ def gotodesert():
 
 # function to generate the pdf of the bill
 def print_bill():
-    import os
-
-    from InvoiceGenerator.api import Invoice, Item, Client, Provider, Creator
-
-    from InvoiceGenerator.pdf import SimpleInvoice
-
     # name of the buyer
     custumer_name = simpledialog.askstring("Name", "Enter the name of custumer")
     
@@ -509,7 +509,7 @@ def print_bill():
     invoice.currency = "Rs."
     invoice.number = "10393069"
     docu = SimpleInvoice(invoice)
-    docu.gen("Invoice.pdf", generate_qr_code=False)
+    docu.gen("Invoice.pdf")
 
 ## The billf function will generate the bill 
 ## and is assigned to the command argument of bill button
@@ -635,26 +635,23 @@ def billf():
 
 
     def pay():
-        simpledialog_box_ask_yes_no = messagebox.askyesno("", "Do you really \
-                                            want to recieve transaction.")
+        simpledialog_box_ask_yes_no = messagebox.askyesno("", 
+                                    "Do you really want to recieve transaction.")
         if simpledialog_box_ask_yes_no:
-            messageboxpaydone = messagebox.showinfo("Thankyou", "Payment \
-                                                    Successfull")
+            messageboxpaydone = messagebox.showinfo("Thankyou", 
+                                                "Payment  Successfull")
 
-    pay_button = tkinter.Button(bill_window, text = "Recieve", 
-                                font = ("algerian", 15), bg = "white", 
-                                borderwidth = 3, relief = "raised", 
-                                command = pay).place(x = 220, y = 600)
+  
     
     sort_bill_button = tkinter.Button(bill_window, text = "Sort Bill", 
                                      font = ("algerian", 15), bg = "white", 
                                      borderwidth = 3, relief = "raised", 
-                                     command = sortbill).place(x = 450, y = 600)
+                                     command = sortbill).place(x = 255, y = 600)
     
     print_button = tkinter.Button(bill_window, text = "Print bill", 
                                 font = ("algerian", 15), bg = "white", 
                                 borderwidth = 3, relief = "raised", 
-                                command = print_bill).place(x = 100, y = 600)
+                                command = print_bill).place(x = 130, y = 600)
 
 
 # function that sort the list
@@ -791,17 +788,11 @@ def sortbill():
                             borderwidth = 2, relief = "groove", 
                             width = 8).grid(row = row_number+6, column = 4)
     
-    def pay():
-        simpledialog_box_ask_yes_no = messagebox.askyesno("", 
-                                    "Do you really want to recieve transaction.")
-        if simpledialog_box_ask_yes_no:
-            messageboxpaydone = messagebox.showinfo("Thankyou", 
-                                                "Payment Successfull")
-
-    pay_button = tkinter.Button(bill_window, text = "Recieve", 
+    
+    print_button = tkinter.Button(bill_window, text = "Print bill", 
                                 font = ("algerian", 15), bg = "white", 
                                 borderwidth = 3, relief = "raised", 
-                                command = pay).place(x = 220, y = 600)
+                                command = print_bill).place(x = 200, y = 600)
         
 
    
