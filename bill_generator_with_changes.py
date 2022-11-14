@@ -485,6 +485,32 @@ def gotodesert():
                         command = palm_price_change).grid(row = 3, column = 3)   
     
 
+# function to generate the pdf of the bill
+def print_bill():
+    import os
+
+    from InvoiceGenerator.api import Invoice, Item, Client, Provider, Creator
+
+    from InvoiceGenerator.pdf import SimpleInvoice
+
+    # name of the buyer
+    custumer_name = simpledialog.askstring("Name", "Enter the name of custumer")
+    
+
+    # Language of the bill
+    os.environ["INVOICE_LANG"] = "en"
+    client = Client(custumer_name)
+    provider = Provider("Nature's Nursery", bank_account='6454-6361-217273', bank_code='2021')
+    creator = Creator('Vishesh Chouhan')
+    invoice = Invoice(client, provider, creator)
+    for key in quantity_dictionary:
+        invoice.add_item(Item(quantity_dictionary[key], price_dictionary[key], description=key.capitalize()))
+
+    invoice.currency = "Rs."
+    invoice.number = "10393069"
+    docu = SimpleInvoice(invoice)
+    docu.gen("Invoice.pdf", generate_qr_code=False)
+
 ## The billf function will generate the bill 
 ## and is assigned to the command argument of bill button
 def billf():
@@ -624,6 +650,12 @@ def billf():
                                      font = ("algerian", 15), bg = "white", 
                                      borderwidth = 3, relief = "raised", 
                                      command = sortbill).place(x = 450, y = 600)
+    
+    print_button = tkinter.Button(bill_window, text = "Print bill", 
+                                font = ("algerian", 15), bg = "white", 
+                                borderwidth = 3, relief = "raised", 
+                                command = print_bill).place(x = 100, y = 600)
+
 
 
 def sortbill():
