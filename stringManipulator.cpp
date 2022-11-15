@@ -1,4 +1,6 @@
 #include<iostream>
+#include<stdlib.h>
+#include <cstdlib>
 using namespace std;
 
 // function that checks the character
@@ -225,15 +227,22 @@ int indexstr(string str, string x)
 int main()
 {
         string str = "rAm iS a gOOd boy";
+
         string str2 = "rohan iS a gOOd boy";
 
         cout<<"The original string is "<<str<<endl;
+        
 
         cout<<"The uppercase string is "<<touppercase(str)<<endl;
+        
         cout<<"The lowercase string is "<<tolowercase(str)<<endl;
+        
         cout<<"The capitalized string is "<<capitalizecase(str)<<endl;
+        
         cout<<"The sentenced case string is "<<sentencecase(str)<<endl;
+        
         cout<<"The toggled string is "<<togglecase(str)<<endl;
+        
 
         cout<<"The reverse string is "<<reversestr(str)<<endl;
 
@@ -248,17 +257,16 @@ int main()
 
         if(issame(str,str2))
         {
-                cout<<"The string "<<str<<" and "<< str2<<" are same";
+                cout<<"The string "<<str<<" and "<< str2<<" are same"<<endl;
         }
         else
         {
-                cout<<"The string "<<str<<" and "<< str2<<" are not same";
+                cout<<"The string "<<str<<" and "<< str2<<" are not same"<<endl;
         }
 
         cout<<"The position of 'i' in "<<str<<" is "<<index(str,'i')<<endl;
         cout<<"The position of 'iS' in "<<str<<" is "<<indexstr(str,"iS")<<endl;
 
-
-
         return 0;
+        exit(0);
 }
