@@ -500,7 +500,7 @@ def print_bill():
     # Language of the bill
     os.environ["INVOICE_LANG"] = "en"
     client = Client(custumer_name)
-    provider = Provider("Nature's Nursery", bank_account='6454-6361-217273', bank_code='2021')
+    provider = Provider("Nature's Nursery", bank_account='6454-6361-217273', bank_code='9031')
     creator = Creator('Vishesh Chouhan')
     invoice = Invoice(client, provider, creator)
     for key in quantity_dictionary:
