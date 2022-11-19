@@ -217,20 +217,203 @@ def gotoflower():
     flower_window = tkinter.Toplevel()
     flower_window.title("Flowers")
     flower_window.config(bg = "white")
-    flower_window.geometry("1150x500+150+250")
+    flower_window.geometry("500x500+150+250")
 
     flowerlabel = tkinter.Label(flower_window, text = "Flowers", 
                             font = ("algerian", 25), 
-                            image = fphoto, compound = "left", bg = "white", 
+                            image = flowerrimage, compound = "left", bg = "white", 
                             height = 100, width = 500).grid(row = 0, column = 0, 
                                                         columnspan = 2)
+
+
+    ## Buttons denoting the plant name to be selected
+    rose = tkinter.Button(flower_window, text = "Rose", image = roseimage, 
+                        height = 100,width = 300, font = ("algerian", 25), 
+                        compound = "left", bg = "white",
+                        command = buyrose).grid(row = 1, column = 0)
+
+
+    priceboxrose = tkinter.Label(flower_window, text = ("`", 
+                               price_dictionary["rose"]), 
+                               font = ("indian rupee", 25), 
+                               bg = "white").grid(row = 1, column = 1)
+
+
+
+    
+
+    
+    ## Buttons denoting the plant name to be selected
+    sunflower = tkinter.Button(flower_window, text = "sunflower", 
+                            image = sunflowerimage, 
+                            height = 100, width = 300, font = ("algerian", 25), 
+                            compound = "left", bg = "white", 
+                            command = buysunflower).grid(row = 2, column = 0)
+
+    priceboxsunflower = tkinter.Label(flower_window, text = ("`", 
+                                    price_dictionary["sunflower"]), 
+                                    font = ("indian rupee", 25), 
+                                    bg = "white").grid(row = 2, column = 1)
+
+
+    
+    
+    ## Buttons denoting the plant name to be selected
+    jasmine = tkinter.Button(flower_window, text = "jasmine", image = jasmineimage, 
+                           height = 100, width = 300, font = ("algerian", 25), 
+                           compound = "left", bg = "white", 
+                           command = buyjasmine).grid(row = 3, column = 0)
+
+    priceboxjasmine = tkinter.Label(flower_window, text = ("`", 
+                                  price_dictionary["jasmine"]), 
+                                  font = ("indian rupee", 25), 
+                                  bg = "white").grid(row = 3, column = 1)
+
+
+
+# The given function will be assigned to the command of decoration button
+# Hence it will be called when button is clicked
+def gotodecoration():
+    # Structure of the window that appears after entering the flower 
+    # section
+    decoration_window = tkinter.Toplevel()
+    decoration_window.title("Dedoration Plants")
+    decoration_window.config(bg = "white")
+    decoration_window.geometry("500x500+150+150")
+
+    decorationlabel = tkinter.Label(decoration_window, 
+                                  text = "Decoration Plants", 
+                                  font = ("algerian", 25), image = decorationimage, 
+                                  compound = "left", bg = "white", height = 100, 
+                                  width = 500).grid(row = 0, 
+                                  column = 0, columnspan = 2)
+
+
+    ## Buttons denoting the plant name to be selected
+    aloevera = tkinter.Button(decoration_window, text = "Aloe vera",   
+                            image = aloeveraimage, height = 100, width = 300, 
+                            font = ("algerian", 25), compound = "left", 
+                            bg = "white", command = buyaloevera).grid(row = 1, 
+                                                                column = 0)
+
+    priceboxaloevera = tkinter.Label(decoration_window, text = ("`", 
+                                   price_dictionary["aloevera"]), 
+                                   font = ("indian rupee", 25), 
+                                   bg = "white").grid(row = 1, column = 1)
+                                        
+
+    
+    
+    ## Buttons denoting the plant name to be selected
+    moneyplant = tkinter.Button(decoration_window, text = "Money Plant", 
+                              image = moneyplantimage, height = 100, width = 300, 
+                              font = ("algerian", 25), compound = "left", 
+                              bg = "white", 
+                              command = buymoneyplant).grid(row = 2, 
+                                                                column = 0)
+
+    priceboxmoneyplant = tkinter.Label(decoration_window, text = ("`", 
+                                    price_dictionary["moneyplant"]), 
+                                    font = ("indian rupee", 25), 
+                                    bg = "white").grid(row = 2, column = 1)
+
+
+
+    
+    ## Buttons denoting the plant name to be selected
+    jade = tkinter.Button(decoration_window, text = "Jade", image = jadeimage, 
+                        height = 100, width = 300, font = ("algerian", 25), 
+                        compound = "left", bg = "white", 
+                        command = buyjade).grid(row = 3, column = 0)
+
+    priceboxjade = tkinter.Label(decoration_window, text = ("`", 
+                                price_dictionary["jade"]), 
+                                font = ("indian rupee", 25), 
+                                bg = "white").grid(row = 3, column = 1)
+                
+
+
+# The given function will be assigned to the command of desert button
+# Hence it will be called when button is clicked  
+def gotodesert():
+    # Structure of the window that appears after entering the flower 
+    # section
+    decoration_window = tkinter.Toplevel()
+    decoration_window.title("Desert plants")
+    decoration_window.config(bg = "white")
+    decoration_window.geometry("500x500+150+150")
+
+    desertlabel = tkinter.Label(decoration_window, text = "Desert Plants", 
+                              font = ("algerian", 25), image = desertimage, 
+                              compound = "left", bg = "white", height = 100, 
+                              width = 500).grid(row = 0, column = 0, 
+                                                columnspan = 2)
+
+
+    ## Buttons denoting the plant name to be selected
+    adenium = tkinter.Button(decoration_window, text = "Adenium", 
+                           image = adeniumimage, 
+                           height = 100, width = 300, font = ("algerian", 25), 
+                           compound = "left", bg = "white", 
+                           command = buyadenium).grid(row = 1, column = 0)
+
+    priceboxadenium = tkinter.Label(decoration_window, text = ("`", 
+                                  price_dictionary["adenium"]), 
+                                  font = ("indian rupee", 25), 
+                                  bg = "white").grid(row = 1, column = 1)
+
+ 
+    
+    ## Buttons denoting the plant name to be selected
+    cactus = tkinter.Button(decoration_window, text = "Cactus", image = cactusimage, 
+                          height = 100, width = 300, font = ("algerian", 25), 
+                          compound = "left", bg = "white", 
+                          command = buycactus).grid(row = 2, column = 0)
+
+    priceboxcactus = tkinter.Label(decoration_window, text = ("`", 
+                                price_dictionary["cactus"]), 
+                                font = ("indian rupee", 25), 
+                                bg = "white").grid(row = 2, column = 1)
+  
+    
+    
+    ## Buttons denoting the plant name to be selected
+    palm = tkinter.Button(decoration_window, text = "Palm", image = palmimage, 
+                        height = 100, width = 300, font = ("algerian", 25), 
+                        compound = "left", bg = "white", 
+                        command = buypalm).grid(row = 3, column = 0)
+
+    priceboxpalm = tkinter.Label(decoration_window, text = ("`", 
+                               price_dictionary["palm"]), 
+                               font = ("indian rupee", 25), 
+                               bg = "white").grid(row = 3, column = 1)
+  
+
+# Funtions for changing the bill
+
+# The given function will be assigned to the command of flower button
+# Hence it will be called when button is clicked
+def gotoBillFlower():
+
+    # Structure of the window that appears after entering the flower 
+    # section
+    flower_window = tkinter.Toplevel()
+    flower_window.title("Edit Flowers Quantity")
+    flower_window.config(bg = "white")
+    flower_window.geometry("730x500+150+250")
+
+    flowerlabel = tkinter.Label(flower_window, text = "Edit Flowers Quantity", 
+                            font = ("algerian", 25), 
+                            image = flowerrimage, compound = "left", bg = "white", 
+                            height = 100, width = 600).grid(row = 0, column = 0, 
+                                                        columnspan = 3)
 
 
     ## Buttons denoting the plant name to be selected
     rose = tkinter.Button(flower_window, text = "Rose", image = fphoto, 
                         height = 100,width = 300, font = ("algerian", 25), 
                         compound = "left", bg = "white",
-                        command = buyrose).grid(row = 1, column = 0)
+                        command = None).grid(row = 1, column = 0)
 
 
     priceboxrose = tkinter.Label(flower_window, text = ("`", 
@@ -246,18 +429,13 @@ def gotoflower():
                         compound = "left", bg = "white",
                         command = changerose).grid(row = 1, column = 2)
 
-    # for changing price 
-    change_rose_price = tkinter.Button(flower_window, text = "Change price",  
-                         image = cancelimage,  
-                        height = 100,width = 300, font = ("algerian", 15), 
-                        compound = "left", bg = "white",
-                        command = rose_price_change).grid(row = 1, column = 3)
+
     
 
     
     ## Buttons denoting the plant name to be selected
     sunflower = tkinter.Button(flower_window, text = "sunflower", 
-                            image = fphoto, 
+                            image = sunflowerimage, 
                             height = 100, width = 300, font = ("algerian", 25), 
                             compound = "left", bg = "white", 
                             command = buysunflower).grid(row = 2, column = 0)
@@ -273,16 +451,10 @@ def gotoflower():
                         compound = "left", bg = "white",
                         command = changesunflower).grid(row = 2, column = 2)
 
-    # for changing price 
-    change_sunflower_price = tkinter.Button(flower_window, text = "Change price",  
-                         image = cancelimage,  
-                        height = 100,width = 300, font = ("algerian", 15), 
-                        compound = "left", bg = "white",
-                        command = sunflower_price_change).grid(row = 2, column = 3)
     
     
     ## Buttons denoting the plant name to be selected
-    jasmine = tkinter.Button(flower_window, text = "jasmine", image = fphoto, 
+    jasmine = tkinter.Button(flower_window, text = "jasmine", image = jasmineimage, 
                            height = 100, width = 300, font = ("algerian", 25), 
                            compound = "left", bg = "white", 
                            command = buyjasmine).grid(row = 3, column = 0)
@@ -298,34 +470,28 @@ def gotoflower():
                         compound = "left", bg = "white",
                         command = changejasmine).grid(row = 3, column = 2)
 
-    # for changing price 
-    change_jasmine_price = tkinter.Button(flower_window, text = "Change price",  
-                         image = cancelimage,  
-                        height = 100,width = 300, font = ("algerian", 15), 
-                        compound = "left", bg = "white",
-                        command = jasmine_price_change).grid(row = 3, column = 3)
 
 # The given function will be assigned to the command of decoration button
 # Hence it will be called when button is clicked
-def gotodecoration():
+def gotoBillDecoration():
     # Structure of the window that appears after entering the flower 
     # section
     decoration_window = tkinter.Toplevel()
-    decoration_window.title("Dedoration Plants")
+    decoration_window.title("Edit Decoration Plants Quantity")
     decoration_window.config(bg = "white")
-    decoration_window.geometry("1150x500+150+150")
+    decoration_window.geometry("730x500+150+150")
 
     decorationlabel = tkinter.Label(decoration_window, 
-                                  text = "Decoration Plants", 
-                                  font = ("algerian", 25), image = fphoto, 
+                                  text = "Edit Decoration Plants Quantity", 
+                                  font = ("algerian", 25), image = decorationimage, 
                                   compound = "left", bg = "white", height = 100, 
-                                  width = 500).grid(row = 0, 
-                                  column = 0, columnspan = 2)
+                                  width = 650).grid(row = 0, 
+                                  column = 0, columnspan = 3)
 
 
     ## Buttons denoting the plant name to be selected
     aloevera = tkinter.Button(decoration_window, text = "Aloe vera",   
-                            image = fphoto, height = 100, width = 300, 
+                            image = aloeveraimage, height = 100, width = 300, 
                             font = ("algerian", 25), compound = "left", 
                             bg = "white", command = buyaloevera).grid(row = 1, 
                                                                 column = 0)
@@ -340,18 +506,13 @@ def gotodecoration():
                         compound = "left", bg = "white",
                         command = changealoevera).grid(row = 1, column = 2)
 
-    # for changing price 
-    change_aloevera_price = tkinter.Button(decoration_window, text = "Change price",  
-                         image = cancelimage,  
-                        height = 100,width = 300, font = ("algerian", 15), 
-                        compound = "left", bg = "white",
-                        command = aloevera_price_change).grid(row = 1, column = 3)                                               
+                                              
 
     
     
     ## Buttons denoting the plant name to be selected
     moneyplant = tkinter.Button(decoration_window, text = "Money Plant", 
-                              image = fphoto, height = 100, width = 300, 
+                              image = moneyplantimage, height = 100, width = 300, 
                               font = ("algerian", 25), compound = "left", 
                               bg = "white", 
                               command = buymoneyplant).grid(row = 2, 
@@ -368,16 +529,11 @@ def gotodecoration():
                         compound = "left", bg = "white",
                         command = changemoneyplant).grid(row = 2, column = 2)
 
-    # for changing price 
-    change_moneyplant_price = tkinter.Button(decoration_window, text = "Change price",  
-                         image = cancelimage,  
-                        height = 100,width = 300, font = ("algerian", 15), 
-                        compound = "left", bg = "white",
-                        command = moneyplant_price_change).grid(row = 2, column = 3)
+
 
     
     ## Buttons denoting the plant name to be selected
-    jade = tkinter.Button(decoration_window, text = "Jade", image = fphoto, 
+    jade = tkinter.Button(decoration_window, text = "Jade", image = jadeimage, 
                         height = 100, width = 300, font = ("algerian", 25), 
                         compound = "left", bg = "white", 
                         command = buyjade).grid(row = 3, column = 0)
@@ -392,34 +548,29 @@ def gotodecoration():
                         compound = "left", bg = "white",
                         command = changejade).grid(row = 3, column = 2)
 
-    # for changing price 
-    change_jade_price = tkinter.Button(decoration_window, text = "Change price",  
-                         image = cancelimage,  
-                        height = 100,width = 300, font = ("algerian", 15), 
-                        compound = "left", bg = "white",
-                        command = jade_price_change).grid(row = 3, column = 3)                       
+                   
 
 
 # The given function will be assigned to the command of desert button
 # Hence it will be called when button is clicked  
-def gotodesert():
+def gotoBillDesert():
     # Structure of the window that appears after entering the flower 
     # section
     decoration_window = tkinter.Toplevel()
-    decoration_window.title("Desert plants")
+    decoration_window.title("Edit Desert plants Quantity")
     decoration_window.config(bg = "white")
-    decoration_window.geometry("1150x500+150+150")
+    decoration_window.geometry("730x500+150+150")
 
-    desertlabel = tkinter.Label(decoration_window, text = "Desert Plants", 
-                              font = ("algerian", 25), image = fphoto, 
+    desertlabel = tkinter.Label(decoration_window, text = "Edit Desert Plants Quantity", 
+                              font = ("algerian", 25), image = desertimage, 
                               compound = "left", bg = "white", height = 100, 
-                              width = 500).grid(row = 0, column = 0, 
-                                                columnspan = 2)
+                              width = 600).grid(row = 0, column = 0, 
+                                                columnspan = 3)
 
 
     ## Buttons denoting the plant name to be selected
     adenium = tkinter.Button(decoration_window, text = "Adenium", 
-                           image = fphoto, 
+                           image = adeniumimage, 
                            height = 100, width = 300, font = ("algerian", 25), 
                            compound = "left", bg = "white", 
                            command = buyadenium).grid(row = 1, column = 0)
@@ -435,15 +586,10 @@ def gotodesert():
                         compound = "left", bg = "white",
                         command = changeadenium).grid(row = 1, column = 2)
 
-    # for changing price 
-    change_adenium_price = tkinter.Button(decoration_window, text = "Change price",  
-                         image = cancelimage,  
-                        height = 100,width = 300, font = ("algerian", 15), 
-                        compound = "left", bg = "white",
-                        command = adenium_price_change).grid(row = 1, column = 3)   
+
     
     ## Buttons denoting the plant name to be selected
-    cactus = tkinter.Button(decoration_window, text = "Cactus", image = fphoto, 
+    cactus = tkinter.Button(decoration_window, text = "Cactus", image = cactusimage, 
                           height = 100, width = 300, font = ("algerian", 25), 
                           compound = "left", bg = "white", 
                           command = buycactus).grid(row = 2, column = 0)
@@ -459,16 +605,10 @@ def gotodesert():
                         compound = "left", bg = "white",
                         command = changecactus).grid(row = 2, column = 2)
 
-    # for changing price 
-    change_cactus_price = tkinter.Button(decoration_window, text = "Change price",  
-                         image = cancelimage,  
-                        height = 100,width = 300, font = ("algerian", 15), 
-                        compound = "left", bg = "white",
-                        command = cactus_price_change).grid(row = 2, column = 3)   
     
     
     ## Buttons denoting the plant name to be selected
-    palm = tkinter.Button(decoration_window, text = "Palm", image = fphoto, 
+    palm = tkinter.Button(decoration_window, text = "Palm", image = palmimage, 
                         height = 100, width = 300, font = ("algerian", 25), 
                         compound = "left", bg = "white", 
                         command = buypalm).grid(row = 3, column = 0)
@@ -483,13 +623,256 @@ def gotodesert():
                         compound = "left", bg = "white",
                         command = changepalm).grid(row = 3, column = 2)
 
+
+
+#*******************************************************************************************
+
+
+# The following functions are responsible for price editing
+#
+#
+# The given function will be assigned to the command of edit price button
+# Hence it will be called when button is clicked
+def gotoEditFlower():
+
+    # Structure of the window that appears after entering the flower 
+    # section
+    flower_window = tkinter.Toplevel()
+    flower_window.title("Edit flowers price")
+    flower_window.config(bg = "white")
+    flower_window.geometry("700x500+150+250")
+
+    flowerlabel = tkinter.Label(flower_window, text = "Edit Flowers Price", 
+                            font = ("algerian", 25), 
+                            image = flowerrimage, compound = "left", bg = "white", 
+                            height = 100, width = 600).grid(row = 0, column = 0, 
+                                                        columnspan = 3)
+
+
+    ## Buttons denoting the plant name to be selected
+    rose = tkinter.Button(flower_window, text = "Rose", image = roseimage, 
+                        height = 100,width = 300, font = ("algerian", 25), 
+                        compound = "left", bg = "white",
+                        command = None).grid(row = 1, column = 0)
+
+
+    priceboxrose = tkinter.Label(flower_window, text = ("`", 
+                               price_dictionary["rose"]), 
+                               font = ("indian rupee", 25), 
+                               bg = "white").grid(row = 1, column = 1)
+
+
+    # for changing price 
+    change_rose_price = tkinter.Button(flower_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = rose_price_change).grid(row = 1, column = 2)
+    
+
+    
+    ## Buttons denoting the plant name to be selected
+    sunflower = tkinter.Button(flower_window, text = "sunflower", 
+                            image = sunflowerimage, 
+                            height = 100, width = 300, font = ("algerian", 25), 
+                            compound = "left", bg = "white", 
+                            command = None).grid(row = 2, column = 0)
+
+    priceboxsunflower = tkinter.Label(flower_window, text = ("`", 
+                                    price_dictionary["sunflower"]), 
+                                    font = ("indian rupee", 25), 
+                                    bg = "white").grid(row = 2, column = 1)
+
+
+    # for changing price 
+    change_sunflower_price = tkinter.Button(flower_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = sunflower_price_change).grid(row = 2, column = 2)
+    
+    
+    ## Buttons denoting the plant name to be selected
+    jasmine = tkinter.Button(flower_window, text = "jasmine", image = jasmineimage, 
+                           height = 100, width = 300, font = ("algerian", 25), 
+                           compound = "left", bg = "white", 
+                           command = buyjasmine).grid(row = 3, column = 0)
+
+    priceboxjasmine = tkinter.Label(flower_window, text = ("`", 
+                                  price_dictionary["jasmine"]), 
+                                  font = ("indian rupee", 25), 
+                                  bg = "white").grid(row = 3, column = 1)
+
+
+    # for changing price 
+    change_jasmine_price = tkinter.Button(flower_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = jasmine_price_change).grid(row = 3, column = 2)
+
+# The given function will be assigned to the command of edit price decoration button
+# Hence it will be called when button is clicked
+def gotoEditDecoration():
+    # Structure of the window that appears after entering the flower 
+    # section
+    decoration_window = tkinter.Toplevel()
+    decoration_window.title("Edit Decoration Plants Price")
+    decoration_window.config(bg = "white")
+    decoration_window.geometry("700x500+150+150")
+
+    decorationlabel = tkinter.Label(decoration_window, 
+                                  text = "Edit Decoration Plants Price", 
+                                  font = ("algerian", 25), image = decorationimage, 
+                                  compound = "left", bg = "white", height = 100, 
+                                  width = 600).grid(row = 0, 
+                                  column = 0, columnspan = 3)
+
+
+    ## Buttons denoting the plant name to be selected
+    aloevera = tkinter.Button(decoration_window, text = "Aloe vera",   
+                            image = aloeveraimage, height = 100, width = 300, 
+                            font = ("algerian", 25), compound = "left", 
+                            bg = "white", command = None).grid(row = 1, 
+                                                                column = 0)
+
+    priceboxaloevera = tkinter.Label(decoration_window, text = ("`", 
+                                   price_dictionary["aloevera"]), 
+                                   font = ("indian rupee", 25), 
+                                   bg = "white").grid(row = 1, column = 1)
+
+
+    # for changing price 
+    change_aloevera_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = aloevera_price_change).grid(row = 1, column = 2)                                               
+
+    
+    
+    ## Buttons denoting the plant name to be selected
+    moneyplant = tkinter.Button(decoration_window, text = "Money Plant", 
+                              image = moneyplantimage, height = 100, width = 300, 
+                              font = ("algerian", 25), compound = "left", 
+                              bg = "white", 
+                              command = None).grid(row = 2, 
+                                                                column = 0)
+
+    priceboxmoneyplant = tkinter.Label(decoration_window, text = ("`", 
+                                    price_dictionary["moneyplant"]), 
+                                    font = ("indian rupee", 25), 
+                                    bg = "white").grid(row = 2, column = 1)
+
+
+
+    # for changing price 
+    change_moneyplant_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = moneyplant_price_change).grid(row = 2, column = 2)
+
+    
+    ## Buttons denoting the plant name to be selected
+    jade = tkinter.Button(decoration_window, text = "Jade", image = jadeimage, 
+                        height = 100, width = 300, font = ("algerian", 25), 
+                        compound = "left", bg = "white", 
+                        command = None).grid(row = 3, column = 0)
+
+    priceboxjade = tkinter.Label(decoration_window, text = ("`", 
+                                price_dictionary["jade"]), 
+                                font = ("indian rupee", 25), 
+                                bg = "white").grid(row = 3, column = 1)
+
+
+    # for changing price 
+    change_jade_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = jade_price_change).grid(row = 3, column = 2)                       
+
+
+# The given function will be assigned to the command of desert button
+# Hence it will be called when button is clicked  
+def gotoEditDesert():
+    # Structure of the window that appears after entering the flower 
+    # section
+    decoration_window = tkinter.Toplevel()
+    decoration_window.title("Edit Desert plants price")
+    decoration_window.config(bg = "white")
+    decoration_window.geometry("730x500+150+150")
+
+    desertlabel = tkinter.Label(decoration_window, text = "Edit Desert plants price", 
+                              font = ("algerian", 25), image = desertimage, 
+                              compound = "left", bg = "white", height = 100, 
+                              width = 600).grid(row = 0, column = 0, 
+                                                columnspan = 3)
+
+
+    ## Buttons denoting the plant name to be selected
+    adenium = tkinter.Button(decoration_window, text = "Adenium", 
+                           image = adeniumimage, 
+                           height = 100, width = 300, font = ("algerian", 25), 
+                           compound = "left", bg = "white", 
+                           command = None).grid(row = 1, column = 0)
+
+    priceboxadenium = tkinter.Label(decoration_window, text = ("`", 
+                                  price_dictionary["adenium"]), 
+                                  font = ("indian rupee", 25), 
+                                  bg = "white").grid(row = 1, column = 1)
+
+
+    # for changing price 
+    change_adenium_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = adenium_price_change).grid(row = 1, column = 2)   
+    
+    ## Buttons denoting the plant name to be selected
+    cactus = tkinter.Button(decoration_window, text = "Cactus", image = cactusimage, 
+                          height = 100, width = 300, font = ("algerian", 25), 
+                          compound = "left", bg = "white", 
+                          command = None).grid(row = 2, column = 0)
+
+    priceboxcactus = tkinter.Label(decoration_window, text = ("`", 
+                                price_dictionary["cactus"]), 
+                                font = ("indian rupee", 25), 
+                                bg = "white").grid(row = 2, column = 1)
+
+
+
+    # for changing price 
+    change_cactus_price = tkinter.Button(decoration_window, text = "Change price",  
+                         image = cancelimage,  
+                        height = 100,width = 300, font = ("algerian", 15), 
+                        compound = "left", bg = "white",
+                        command = cactus_price_change).grid(row = 2, column = 2)   
+    
+    
+    ## Buttons denoting the plant name to be selected
+    palm = tkinter.Button(decoration_window, text = "Palm", image = palmimage, 
+                        height = 100, width = 300, font = ("algerian", 25), 
+                        compound = "left", bg = "white", 
+                        command = None).grid(row = 3, column = 0)
+
+    priceboxpalm = tkinter.Label(decoration_window, text = ("`", 
+                               price_dictionary["palm"]), 
+                               font = ("indian rupee", 25), 
+                               bg = "white").grid(row = 3, column = 1)
+
     # for changing price 
     change_palm_price = tkinter.Button(decoration_window, text = "Change price",  
                          image = cancelimage,  
                         height = 100,width = 300, font = ("algerian", 15), 
                         compound = "left", bg = "white",
-                        command = palm_price_change).grid(row = 3, column = 3)   
-    
+                        command = palm_price_change).grid(row = 3, column = 2)   
+
+
+
+
 
 # function to generate the pdf of the bill
 def print_bill():
@@ -795,7 +1178,73 @@ def sortbill():
                                 command = print_bill).place(x = 200, y = 600)
         
 
+
+
+# Function which will reinitialize the window
+def restart():
+    quantity_dictionary.clear()
    
+
+def editprice():
+    Edit_window = tkinter.Toplevel()
+    Edit_window.title("Edit Prices")
+    Edit_window.config(bg = "white")
+    Edit_window.geometry("500x500+150+150")
+    img = tkinter.Label(Edit_window, image = fphoto, compound = "left", 
+                        bg = "white", height = 100, 
+                        width = 500).grid(row = 0, column = 0)
+
+    flower = tkinter.Button(Edit_window, text = "flowery plant", 
+                            font = ("algerian", 25), bg = "white", width = 24, 
+                            height = 2, command = gotoEditFlower).grid(row = 1, 
+                            column = 0)
+
+    decoration = tkinter.Button(Edit_window, text = "decoration plant", 
+                                font = ("algerian", 25), bg = "white",
+                                 width = 24, 
+                                height = 2, 
+                                command = gotoEditDecoration).grid(row = 2, 
+                                column = 0)
+
+    desert = tkinter.Button(Edit_window, text = "desert plant", 
+                            font = ("algerian", 25), bg = "white", width = 24, 
+                            height = 2, command = gotoEditDesert).grid(row = 3, 
+                            column = 0)
+
+    space = tkinter.Label(Edit_window, bg = "white", width = 24, 
+                         height = 2).grid(row = 4, column = 0)
+
+    
+# Function to edit the bill 
+def editBill():
+    Edit_Bill_window = tkinter.Toplevel()
+    Edit_Bill_window.title("Edit Prices")
+    Edit_Bill_window.config(bg = "white")
+    Edit_Bill_window.geometry("500x500+150+150")
+    img = tkinter.Label(Edit_Bill_window, image = fphoto, compound = "left", 
+                        bg = "white", height = 100, 
+                        width = 500).grid(row = 0, column = 0)
+
+    flower = tkinter.Button(Edit_Bill_window, text = "flowery plant", 
+                            font = ("algerian", 25), bg = "white", width = 24, 
+                            height = 2, command = gotoBillFlower).grid(row = 1, 
+                            column = 0)
+
+    decoration = tkinter.Button(Edit_Bill_window, text = "decoration plant", 
+                                font = ("algerian", 25), bg = "white",
+                                 width = 24, 
+                                height = 2, 
+                                command = gotoBillDecoration).grid(row = 2, 
+                                column = 0)
+
+    desert = tkinter.Button(Edit_Bill_window, text = "desert plant", 
+                            font = ("algerian", 25), bg = "white", width = 24, 
+                            height = 2, command = gotoBillDesert).grid(row = 3, 
+                            column = 0)
+
+    space = tkinter.Label(Edit_Bill_window, bg = "white", width = 24, 
+                         height = 2).grid(row = 4, column = 0)
+    
 
     
     
@@ -803,6 +1252,24 @@ def sortbill():
 
 ## The runner of the code
 def main():
+
+     # Menubar code
+    menubar = tkinter.Menu(main_window)
+
+    # Adding file menu option
+    file = tkinter.Menu(menubar,tearoff=0)
+    menubar.add_cascade(label = "File", menu=file)
+    file.add_command(label="New",command = restart )
+    file.add_command(label="Quit",command = main_window.destroy)
+
+    edit = tkinter.Menu(menubar,tearoff = 0)
+    menubar.add_cascade(label = "Edit",menu = edit)
+    edit.add_command(label = "Edit Price",command = editprice)
+    edit.add_command(label = "Edit Bill", command = editBill)
+
+
+
+    main_window.config(menu = menubar)
 
     img = tkinter.Label(main_window, image = fphoto, compound = "left", 
                         bg = "white", height = 100, 
@@ -844,6 +1311,44 @@ if __name__ ==  "__main__":
 
     photo1 = tkinter.PhotoImage(file = "cancel.png")
     cancelimage = photo1.subsample(3,3)
+
+    rose = tkinter.PhotoImage(file = "rose.png")
+    roseimage = rose.subsample(3,3)
+
+    sunflower = tkinter.PhotoImage(file = "sunflower.png")
+    sunflowerimage = sunflower.subsample(3,3)
+
+    jasmine = tkinter.PhotoImage(file = "jasmine.png")
+    jasmineimage = jasmine.subsample(3,3)
+
+    aloevera = tkinter.PhotoImage(file = "aloevera.png")
+    aloeveraimage = aloevera.subsample(3,3)
+
+    moneyplant = tkinter.PhotoImage(file = "moneyplant.png")
+    moneyplantimage = moneyplant.subsample(3,3)
+
+    jade = tkinter.PhotoImage(file = "jade.png")
+    jadeimage = jade.subsample(3,3)
+
+    adenium = tkinter.PhotoImage(file = "adenium.png")
+    adeniumimage = adenium.subsample(3,3)
+
+    cactus = tkinter.PhotoImage(file = "cactus.png")
+    cactusimage = cactus.subsample(3,3)
+
+    palm = tkinter.PhotoImage(file = "palm.png")
+    palmimage = palm.subsample(3,3)
+
+    flower = tkinter.PhotoImage(file = "flower.png")
+    flowerrimage = flower.subsample(3,3)
+
+    decoration = tkinter.PhotoImage(file = "decoration.png")
+    decorationimage = decoration.subsample(3,3)
+
+    desert = tkinter.PhotoImage(file = "desert.png")
+    desertimage = desert.subsample(3,3)
+
+   
     
     ## module function for profiling
     
